@@ -5,6 +5,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NgxToggleSwitchModule} from '../../../ngx-iam-ui/src/lib/components/toggle-switch/ngx-toggle-switch.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {NgxCardPageModule} from '../../../ngx-iam-ui/src/lib/components/card-page/ngx-card-page.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     NgxToggleSwitchModule,
+    NgxCardPageModule,
     ReactiveFormsModule,
     FormsModule
   ],

@@ -1,11 +1,11 @@
 import {NgModule} from '@angular/core';
-import {NgxToggleSwitchComponent} from './ngx-toggle-switch.component';
+import {NgxCardPageComponent} from './ngx-card-page.component';
 import {CommonModule} from '@angular/common';
 import {DirectiveModule} from '../../directives/directives.module';
 
 @NgModule({
-  declarations: [NgxToggleSwitchComponent],
+  declarations: [NgxCardPageComponent],
   imports: [CommonModule, DirectiveModule],
-  exports: [NgxToggleSwitchComponent]
+  exports: [NgxCardPageComponent]
 })
-export class NgxToggleSwitchModule { }
+export class NgxCardPageModule { }
