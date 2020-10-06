@@ -1,5 +1,8 @@
 
 <h1>playground</h1>
-<ngx-iam-ui></ngx-iam-ui>
+
+<form>
+  <ngx-toggle-switch [ngxColor]="'primary'" name="checkedValueTest" [(ngModel)]="checkedValue" (ngModelChange)="onChangeModel($event)"></ngx-toggle-switch>
+</form>
 
 <router-outlet></router-outlet>

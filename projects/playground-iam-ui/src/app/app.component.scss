@@ -1,0 +1,31 @@
+//ngx-toggle-switch {
+//  background-color: black;
+//}
+
+:host {
+  span.slider.round {
+    background: red !important ;
+  }
+  ngx-toggle-switch {
+    span.slider.round {
+      background: red !important ;
+    }
+    .danger {
+      background: #ff0000;
+    }
+    span.slider.round {
+      background: red !important ;
+    }
+  }
+}
+
+
+//span.slider.round {
+//  background: red !important ;
+//}
+//:host {
+//  &.danger {
+//    background-color: red;
+//  }
+//  background-color: black;
+//}
