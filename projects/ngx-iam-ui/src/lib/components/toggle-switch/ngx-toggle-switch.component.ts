@@ -1,5 +1,5 @@
 import {
-  ChangeDetectionStrategy,
+  ChangeDetectionStrategy, ChangeDetectorRef,
   Component,
   DoCheck,
   forwardRef,
@@ -36,7 +36,7 @@ export class NgxToggleSwitchComponent implements ControlValueAccessor, OnInit {
 
   private onChangeCallback = (_: any) => {};
   private onTouchedCallback = () => {};
-  constructor() { }
+  constructor( private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     // this.isRed = true;
@@ -48,6 +48,7 @@ export class NgxToggleSwitchComponent implements ControlValueAccessor, OnInit {
       this.checked = false;
     } else {
       this.checked = value;
+      this.cdr.markForCheck();
     }
   }
 

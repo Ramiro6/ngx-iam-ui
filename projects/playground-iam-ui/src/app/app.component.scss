@@ -1,31 +1,4 @@
-//ngx-toggle-switch {
-//  background-color: black;
-//}
-
-:host {
-  span.slider.round {
-    background: red !important ;
-  }
-  ngx-toggle-switch {
-    span.slider.round {
-      background: red !important ;
-    }
-    .danger {
-      background: #ff0000;
-    }
-    span.slider.round {
-      background: red !important ;
-    }
-  }
+body {
+  background-color: #eeeeee;
+  font-family: 'Helvetica';
 }
-
-
-//span.slider.round {
-//  background: red !important ;
-//}
-//:host {
-//  &.danger {
-//    background-color: red;
-//  }
-//  background-color: black;
-//}
