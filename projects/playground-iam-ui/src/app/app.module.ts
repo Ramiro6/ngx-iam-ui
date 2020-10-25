@@ -3,10 +3,9 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {NgxToggleSwitchModule} from '../../../ngx-iam-ui/src/lib/components/toggle-switch/ngx-toggle-switch.module';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {NgxCardPageModule} from '../../../ngx-iam-ui/src/lib/components/card-page/ngx-card-page.module';
-import {NgxCardModule} from 'ngx-iam-ui';
+import {WelcomeModule} from './module/welcome/welcome.module';
+import {PlaygroundModule} from './module/playground/playground.module';
+import {DocumentationModule} from './module/documentation/documentation.module';
 
 @NgModule({
   declarations: [
@@ -15,11 +14,9 @@ import {NgxCardModule} from 'ngx-iam-ui';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxToggleSwitchModule,
-    NgxCardPageModule,
-    NgxCardModule,
-    ReactiveFormsModule,
-    FormsModule
+    WelcomeModule,
+    PlaygroundModule,
+    DocumentationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
