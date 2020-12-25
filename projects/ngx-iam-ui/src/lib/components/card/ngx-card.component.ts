@@ -20,6 +20,7 @@ export class NgxCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('ramiro');
     // this.isRed = true;
   }
 }
