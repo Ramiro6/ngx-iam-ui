@@ -1,12 +1,4 @@
-import {
-  ChangeDetectionStrategy, ChangeDetectorRef,
-  Component,
-  DoCheck,
-  forwardRef,
-  HostBinding, HostListener, Input,
-  OnInit,
-  ViewEncapsulation
-} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, forwardRef, Input, OnInit} from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 import {colorType} from '../../directives/color-by-type.directive';
 
@@ -22,6 +14,7 @@ const COUNTER_CONTROL_ACCESSOR = {
   styleUrls: ['./ngx-toggle-switch.component.scss'],
   template: `
     <label class="ngx-switch__box">
+      <p>Ramiro</p>
       <input type="checkbox" [checked]="checked" (click)="onCLickToggle()">
       <span class="slider round" ngxSetColor [getColor]="ngxColor"></span>
     </label>
