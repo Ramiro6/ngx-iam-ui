@@ -1,12 +1,4 @@
-import {
-  ChangeDetectionStrategy, ChangeDetectorRef,
-  Component,
-  DoCheck,
-  forwardRef,
-  HostBinding, HostListener, Input,
-  OnInit,
-  ViewEncapsulation
-} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, forwardRef, Input, OnInit} from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 import {colorType} from '../../directives/color-by-type.directive';
 
@@ -24,8 +16,7 @@ const COUNTER_CONTROL_ACCESSOR = {
     <label class="ngx-switch__box">
       <input type="checkbox" [checked]="checked" (click)="onCLickToggle()">
       <span class="slider round" ngxSetColor [getColor]="ngxColor"></span>
-    </label>
-  `,
+    </label>`,
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [COUNTER_CONTROL_ACCESSOR],
 })
@@ -39,6 +30,7 @@ export class NgxToggleSwitchComponent implements ControlValueAccessor, OnInit {
   constructor( private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
+    console.log('hey');
     // this.isRed = true;
   }
 

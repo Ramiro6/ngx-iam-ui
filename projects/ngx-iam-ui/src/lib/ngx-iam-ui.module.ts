@@ -1,6 +1,5 @@
-import { NgModule } from '@angular/core';
-import { NgxIamUiComponent } from './ngx-iam-ui.component';
-
+import {NgModule} from '@angular/core';
+import {NgxIamUiComponent} from './ngx-iam-ui.component';
 
 
 @NgModule({

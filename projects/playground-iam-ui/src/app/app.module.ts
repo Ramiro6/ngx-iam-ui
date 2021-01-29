@@ -11,13 +11,13 @@ import {DocumentationModule} from './module/documentation/documentation.module';
   declarations: [
     AppComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    WelcomeModule,
-    PlaygroundModule,
-    DocumentationModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        WelcomeModule,
+        PlaygroundModule,
+        DocumentationModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
