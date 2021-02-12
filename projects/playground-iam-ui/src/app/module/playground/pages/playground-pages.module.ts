@@ -4,8 +4,8 @@ import {PlaygroundComponent} from './playground/playground.component';
 import {RouterModule, Routes} from '@angular/router';
 // import {NgxCardModule, NgxToggleSwitchModule} from 'ngx-iam-ui';
 import {NgxIamUiModule} from '../../../../../../ngx-iam-ui/src/lib/ngx-iam-ui.module';
-import { NgxToggleSwitchModule } from '../../../../../../ngx-iam-ui/src/lib/components/toggle-switch/ngx-toggle-switch.module';
-import {NgxCardPageModule} from 'ngx-iam-ui';
+import {NgxToggleSwitchModule} from '../../../../../../ngx-iam-ui/src/lib/components/toggle-switch/ngx-toggle-switch.module';
+import {NgxCardModule} from '../../../../../../ngx-iam-ui/src/lib/components/card';
 
 export const ROUTES: Routes = [
   { path: '', component: PlaygroundComponent}
@@ -20,7 +20,8 @@ export const ROUTES: Routes = [
     RouterModule.forChild(ROUTES),
     NgxToggleSwitchModule,
     NgxIamUiModule,
-    NgxCardPageModule
+    NgxCardModule
+    // NgxCardPageModule
   ]
 })
 export class PlaygroundPagesModule { }

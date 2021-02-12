@@ -57,6 +57,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "preserveSymlinks": true,
             "outputPath": "dist/playground-iam-ui",
             "index": "projects/playground-iam-ui/src/index.html",
             "main": "projects/playground-iam-ui/src/main.ts",
