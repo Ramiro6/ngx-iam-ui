@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {colorType} from '../../directives/color-by-type.directive';
+import {colorType} from '../../directives/ngx-color-by-type.directive';
 
 @Component({
   selector: 'ngx-card-page',

@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, forwardRef, Input, OnInit} from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
-import {colorType} from '../../directives/color-by-type.directive';
+import {colorType} from '../../directives/ngx-color-by-type.directive';
 
 
 const COUNTER_CONTROL_ACCESSOR = {

@@ -1,13 +1,13 @@
 import {NgModule} from '@angular/core';
-import {ColorByTypeDirective} from './color-by-type.directive';
+import {NgxColorByTypeDirective} from './ngx-color-by-type.directive';
 
 @NgModule({
   imports: [],
   exports: [
-    ColorByTypeDirective
+    NgxColorByTypeDirective
   ],
   declarations: [
-    ColorByTypeDirective
+    NgxColorByTypeDirective
   ],
   providers: [],
 })
