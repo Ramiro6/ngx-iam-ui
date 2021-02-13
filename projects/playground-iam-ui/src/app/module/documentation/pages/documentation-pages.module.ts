@@ -2,6 +2,8 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DocumentationComponent} from './documentation/documentation.component';
 import {RouterModule, Routes} from '@angular/router';
+import {NgxSideNavModule} from '../../../../../../ngx-iam-ui/src/lib/components/ngx-side-nav';
+import {NgxCardModule, NgxCardPageModule} from 'ngx-iam-ui';
 
 export const ROUTES: Routes = [
   { path: '', component: DocumentationComponent }
@@ -11,7 +13,10 @@ export const ROUTES: Routes = [
   declarations: [DocumentationComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(ROUTES)
+    NgxSideNavModule,
+    NgxCardModule,
+    RouterModule.forChild(ROUTES),
+    NgxCardPageModule
   ]
 })
 export class DocumentationPagesModule { }

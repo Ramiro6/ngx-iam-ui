@@ -6,6 +6,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {NgxIamUiModule} from '../../../../../../ngx-iam-ui/src/lib/ngx-iam-ui.module';
 import {NgxToggleSwitchModule} from '../../../../../../ngx-iam-ui/src/lib/components/toggle-switch/ngx-toggle-switch.module';
 import {NgxCardModule} from '../../../../../../ngx-iam-ui/src/lib/components/card';
+import {NgxSideNavModule} from '../../../../../../ngx-iam-ui/src/lib/components/ngx-side-nav/ngx-side-nav.module';
 
 export const ROUTES: Routes = [
   { path: '', component: PlaygroundComponent}
@@ -20,7 +21,8 @@ export const ROUTES: Routes = [
     RouterModule.forChild(ROUTES),
     NgxToggleSwitchModule,
     NgxIamUiModule,
-    NgxCardModule
+    NgxCardModule,
+    NgxSideNavModule
     // NgxCardPageModule
   ]
 })
