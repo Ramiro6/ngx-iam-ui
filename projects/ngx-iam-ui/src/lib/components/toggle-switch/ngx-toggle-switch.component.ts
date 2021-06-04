@@ -34,7 +34,8 @@ export class NgxToggleSwitchComponent implements ControlValueAccessor, OnInit {
     // this.isRed = true;
   }
 
-  writeValue(value): void {
+  // TODO:// change type
+  writeValue(value: any): void {
     console.log('write value', value);
     if (value === null) {
       this.checked = false;
