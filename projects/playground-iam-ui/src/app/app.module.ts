@@ -12,11 +12,11 @@ import {DocumentationModule} from './module/documentation/documentation.module';
     AppComponent
   ],
     imports: [
-        BrowserModule,
-        AppRoutingModule,
-        WelcomeModule,
-        PlaygroundModule,
-        DocumentationModule
+      BrowserModule,
+      AppRoutingModule,
+      WelcomeModule,
+      PlaygroundModule,
+      DocumentationModule
     ],
   providers: [],
   bootstrap: [AppComponent]
