@@ -6,12 +6,9 @@ import {Router} from '@angular/router';
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss']
 })
-export class WelcomeComponent implements OnInit {
+export class WelcomeComponent {
 
   constructor( private router: Router ) { }
-
-  ngOnInit(): void {
-  }
 
   redirectTo(): void {
     this.router.navigate(['documentation']).then();

@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
   selector: 'ngx-side-aside',
@@ -6,11 +6,4 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
   styleUrls: ['./ngx-side-aside.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NgxSideAsideComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class NgxSideAsideComponent {}

@@ -30,14 +30,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/ngx-iam-ui/tsconfig.lib.json",
-              "projects/ngx-iam-ui/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/ngx-iam-ui/**/*.ts",
+              "projects/ngx-iam-ui/**/*.html"
             ]
           }
         }
@@ -138,15 +135,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/playground-iam-ui/tsconfig.app.json",
-              "projects/playground-iam-ui/tsconfig.spec.json",
-              "projects/playground-iam-ui/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/playground-iam-ui/**/*.ts",
+              "projects/playground-iam-ui/**/*.html"
             ]
           }
         },
@@ -163,6 +156,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngx-iam-ui"
+    }
+  },
+  "defaultProject": "ngx-iam-ui",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

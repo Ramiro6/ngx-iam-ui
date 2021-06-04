@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
   selector: 'ngx-side-main',
@@ -6,11 +6,5 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
   styleUrls: ['./ngx-side-main.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NgxSideMainComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class NgxSideMainComponent {
 }

@@ -17,6 +17,7 @@ export class NgxCardPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('eslit...');
     // this.isRed = true;
   }
 }
