@@ -1,6 +1,6 @@
 import {Directive, HostBinding, Input} from '@angular/core';
 
-export type colorType = 'primary' | 'danger' | 'grey' | 'white';
+export type colorType = 'primary' | 'danger' | 'grey' | 'light';
 
 @Directive({selector: '[ngxSetColor]'})
 export class NgxColorByTypeDirective {
@@ -19,7 +19,7 @@ export class NgxColorByTypeDirective {
     return this.getColor === 'grey';
   }
 
-  @HostBinding('class.ngx-color__white') get setWhite(): boolean {
-    return this.getColor === 'white';
+  @HostBinding('class.ngx-color__light') get setLight(): boolean {
+    return this.getColor === 'light';
   }
 }

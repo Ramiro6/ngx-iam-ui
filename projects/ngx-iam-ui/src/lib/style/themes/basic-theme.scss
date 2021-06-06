@@ -1,8 +1,8 @@
-@import "../_var";
+//@import "../_var";
 
 $colors: (
-  ngx-color__primary: $primary-color,
-  ngx-color__danger: $danger-color,
-  ngx-color__grey: $grey-color,
-  ngx-color__white: $white-color,
+  ngx-color__primary: var(--primary-color),
+  ngx-color__danger: var(--danger-color),
+  ngx-color__grey: var(--grey-color),
+  ngx-color__light: var(--light-color),
 );
