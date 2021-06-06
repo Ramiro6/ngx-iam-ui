@@ -13,4 +13,7 @@ export * from './lib/components/toggle-switch/ngx-toggle-switch.component';
 export * from './lib/components/card-page/ngx-card-page.component';
 export * from './lib/components/card-page/ngx-card-page.module';
 
+// export * from './lib/components/ngx-tree/ngx-tree.component';
+// export * from './lib/components/ngx-tree/ngx-tree.module';
+
 // export default {};

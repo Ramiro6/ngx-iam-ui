@@ -7,6 +7,8 @@ import {NgxToggleSwitchModule} from '../../../../../../ngx-iam-ui/src/lib/compon
 import {NgxCardModule} from '../../../../../../ngx-iam-ui/src/lib/components/card';
 import {NgxSideNavModule} from '../../../../../../ngx-iam-ui/src/lib/components/ngx-side-nav/ngx-side-nav.module';
 import {CardComponent} from '../../documentation/pages/card/card.component';
+import {NgxTreeModule} from '../../../../../../ngx-iam-ui/src/lib/components/ngx-tree/ngx-tree.module';
+import {NgxIconDefaultModule} from '../../../../../../ngx-iam-ui/src/lib/components/ngx-icon-default/ngx-icon-default.module';
 
 export const ROUTES: Routes = [
   { path: '', component: PlaygroundComponent },
@@ -23,7 +25,9 @@ export const ROUTES: Routes = [
     NgxToggleSwitchModule,
     NgxIamUiModule,
     NgxCardModule,
-    NgxSideNavModule
+    NgxSideNavModule,
+    NgxTreeModule,
+    NgxIconDefaultModule
     // NgxCardPageModule
   ]
 })

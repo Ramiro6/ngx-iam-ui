@@ -10,30 +10,13 @@
       ],
       "parserOptions": {
         "project": [
-          "projects/playground-iam-ui/tsconfig.app.json",
-          "projects/playground-iam-ui/tsconfig.spec.json",
-          "projects/playground-iam-ui/e2e/tsconfig.json"
+          "projects/playground-iam-ui/tsconfig.*.app.json",
+          "projects/playground-iam-ui/tsconfig.*.spec.json",
+          "projects/playground-iam-ui/e2e/tsconfig.*.json"
         ],
         "createDefaultProgram": true
       },
-      "rules": {
-        "@angular-eslint/directive-selector": [
-          "error",
-          {
-            "type": "attribute",
-            "prefix": "app",
-            "style": "camelCase"
-          }
-        ],
-        "@angular-eslint/component-selector": [
-          "error",
-          {
-            "type": "element",
-            "prefix": "app",
-            "style": "kebab-case"
-          }
-        ]
-      }
+      "rules": {}
     },
     {
       "files": [

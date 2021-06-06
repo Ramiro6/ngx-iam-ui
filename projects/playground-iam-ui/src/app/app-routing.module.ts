@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 // welcome
 const ROUTES: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'welcome'}
+  { path: '', pathMatch: 'full', redirectTo: 'playground'}
 ];
 
 @NgModule({

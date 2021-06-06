@@ -10,29 +10,12 @@
       ],
       "parserOptions": {
         "project": [
-          "projects/ngx-iam-ui/tsconfig.lib.json",
-          "projects/ngx-iam-ui/tsconfig.spec.json"
+          "projects/ngx-iam-ui/tsconfig.*.lib.json",
+          "projects/ngx-iam-ui/tsconfig.*.spec.json"
         ],
         "createDefaultProgram": true
       },
-      "rules": {
-        "@angular-eslint/directive-selector": [
-          "error",
-          {
-            "type": "attribute",
-            "prefix": "ngx",
-            "style": "camelCase"
-          }
-        ],
-        "@angular-eslint/component-selector": [
-          "error",
-          {
-            "type": "element",
-            "prefix": "ngx",
-            "style": "kebab-case"
-          }
-        ]
-      }
+      "rules": {}
     },
     {
       "files": [
