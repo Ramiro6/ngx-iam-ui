@@ -1,14 +1,13 @@
-import {Component} from '@angular/core';
-import {Router} from '@angular/router';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.scss']
+  styleUrls: ['./welcome.component.scss'],
 })
 export class WelcomeComponent {
-
-  constructor( private router: Router ) { }
+  constructor(private router: Router) {}
 
   redirectTo(): void {
     this.router.navigate(['documentation']).then();

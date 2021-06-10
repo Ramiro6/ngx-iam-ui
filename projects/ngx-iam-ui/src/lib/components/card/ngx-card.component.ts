@@ -1,23 +1,32 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {colorType} from '../../directives/ngx-color-by-type.directive';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnInit,
+} from '@angular/core';
+import { colorType } from '../../directives/ngx-color-by-type.directive';
 
 @Component({
   selector: 'ngx-card',
   styleUrls: ['./ngx-card.component.scss'],
   template: `
-    <div class="ngx-card__container" ngxSetColor [getColor]="ngxColor" [ngStyle]="{'width': ngxWidth}">
+    <div
+      class="ngx-card__container"
+      ngxSetColor
+      [getColor]="ngxColor"
+      [ngStyle]="{ width: ngxWidth }"
+    >
       <div class="ngx-card__body">
         <ng-content></ng-content>
       </div>
     </div>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-
 export class NgxCardComponent implements OnInit {
   @Input() ngxColor: colorType;
   @Input() ngxWidth: string = '18rem';
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     console.log('ramiro');

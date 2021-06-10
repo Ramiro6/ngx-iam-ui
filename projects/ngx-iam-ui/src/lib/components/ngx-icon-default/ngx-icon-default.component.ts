@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { ALL_ICONS } from './ngx-all-icons';
 
 export type typeIcon = 'arrow';
 
@@ -10,14 +9,9 @@ export type typeIcon = 'arrow';
       <path d="M7.503 10.28L1.339 4 0 5.364 7.489 13 15 5.364 13.661 4z"></path>
     </svg>
   `,
-  styleUrls: ['./ngx-icon-default.component.css'],
+  styleUrls: ['./ngx-icon-default.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NgxIconDefaultComponent {
-  @Input() icon: string;
-
-  constructor() {
-    console.log(ALL_ICONS);
-    console.log(Object.keys(ALL_ICONS));
-  }
+  // @Input() icon?: string;
 }

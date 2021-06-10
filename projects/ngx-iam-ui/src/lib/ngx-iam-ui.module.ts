@@ -1,10 +1,9 @@
-import {NgModule} from '@angular/core';
-import {NgxIamUiComponent} from './ngx-iam-ui.component';
-
+import { NgModule } from '@angular/core';
+import { NgxIamUiComponent } from './ngx-iam-ui.component';
 
 @NgModule({
   declarations: [NgxIamUiComponent],
   imports: [],
-  exports: [NgxIamUiComponent]
+  exports: [NgxIamUiComponent],
 })
-export class NgxIamUiModule { }
+export class NgxIamUiModule {}

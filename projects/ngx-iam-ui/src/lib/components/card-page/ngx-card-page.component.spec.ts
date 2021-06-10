@@ -8,9 +8,8 @@ describe('NgxIamUiComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgxCardPageComponent ]
-    })
-    .compileComponents();
+      declarations: [NgxCardPageComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

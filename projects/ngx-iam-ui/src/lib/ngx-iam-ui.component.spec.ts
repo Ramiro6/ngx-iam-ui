@@ -8,9 +8,8 @@ describe('NgxIamUiComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgxIamUiComponent ]
-    })
-    .compileComponents();
+      declarations: [NgxIamUiComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

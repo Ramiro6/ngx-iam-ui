@@ -8,9 +8,8 @@ describe('NgxIconDefaultComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgxIconDefaultComponent ]
-    })
-    .compileComponents();
+      declarations: [NgxIconDefaultComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -1,5 +1,10 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {colorType} from '../../directives/ngx-color-by-type.directive';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnInit,
+} from '@angular/core';
+import { colorType } from '../../directives/ngx-color-by-type.directive';
 
 @Component({
   selector: 'ngx-card-page',
@@ -9,12 +14,11 @@ import {colorType} from '../../directives/ngx-color-by-type.directive';
       <ng-content></ng-content>
     </div>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-
 export class NgxCardPageComponent implements OnInit {
   @Input() ngxColor: colorType;
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     console.log('eslit...');

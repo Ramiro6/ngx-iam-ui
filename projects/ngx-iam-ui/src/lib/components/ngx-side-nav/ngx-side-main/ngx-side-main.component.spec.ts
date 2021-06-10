@@ -8,9 +8,8 @@ describe('NgxSideMainComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgxSideMainComponent ]
-    })
-    .compileComponents();
+      declarations: [NgxSideMainComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

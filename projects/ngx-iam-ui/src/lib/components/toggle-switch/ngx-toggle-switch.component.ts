@@ -1,33 +1,37 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, forwardRef, Input, OnInit} from '@angular/core';
-import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
-import {colorType} from '../../directives/ngx-color-by-type.directive';
-
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  forwardRef,
+  Input,
+  OnInit,
+} from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { colorType } from '../../directives/ngx-color-by-type.directive';
 
 const COUNTER_CONTROL_ACCESSOR = {
   provide: NG_VALUE_ACCESSOR,
   useExisting: forwardRef(() => NgxToggleSwitchComponent),
-  multi: true
+  multi: true,
 };
 
 @Component({
   selector: 'ngx-toggle-switch',
   styleUrls: ['./ngx-toggle-switch.component.scss'],
-  template: `
-    <label class="ngx-switch__box">
-      <input type="checkbox" [checked]="checked" (click)="onCLickToggle()">
-      <span class="slider round" ngxSetColor [getColor]="ngxColor"></span>
-    </label>`,
+  template: ` <label class="ngx-switch__box">
+    <input type="checkbox" [checked]="checked" (click)="onCLickToggle()" />
+    <span class="slider round" ngxSetColor [getColor]="ngxColor"></span>
+  </label>`,
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [COUNTER_CONTROL_ACCESSOR],
 })
-
 export class NgxToggleSwitchComponent implements ControlValueAccessor, OnInit {
   @Input() ngxColor: colorType;
   checked: boolean;
 
   private onChangeCallback = (_: any) => {};
   private onTouchedCallback = () => {};
-  constructor( private cdr: ChangeDetectorRef) { }
+  constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {
     console.log('hey');
