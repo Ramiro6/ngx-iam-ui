@@ -5,4 +5,12 @@ import { Component } from '@angular/core';
   templateUrl: './playground.component.html',
   styleUrls: ['./playground.component.scss'],
 })
-export class PlaygroundComponent {}
+export class PlaygroundComponent {
+  state: boolean;
+  items: string[] = ['', '', ''];
+
+  onChangeState(getState: boolean): void {
+    debugger;
+    this.state = getState;
+  }
+}

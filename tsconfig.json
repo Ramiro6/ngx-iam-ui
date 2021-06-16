@@ -18,10 +18,31 @@
       "dom"
     ],
     "paths": {
-      "ngx-iam-ui": [
-        "dist/ngx-iam-ui/ngx-iam-ui",
+//      "@ngx-iam-ui": [
+//        "dist/ngx-iam-ui"
+//      ],
+//      "@ngx-iam-ui/*": [
+//        "dist/ngx-iam-ui/*"
+//      ],
+//      "@ngx-iam-ui/*": [
+//        "projects/ngx-iam-ui/src/lib/*",
+//      ],
+//      "@ngx-iam-ui": [
+//        "projects/ngx-iam-ui/src/lib",
+//      ],
+
+//      "ngx-iam-ui": [
+//        "dist/ngx-iam-ui/ngx-iam-ui",
+//        "dist/ngx-iam-ui"
+//      ]
+      "@ngx-iam-ui/ngx-iam-ui": [
+        "dist/ngx-iam-ui/*",
         "dist/ngx-iam-ui"
-      ]
-    }
+      ],
+      "@ngx-iam-ui/ngx-iam-ui/*": [
+        "projects/ngx-iam-ui/src/*"
+      ],
+    },
+    "allowSyntheticDefaultImports": true
   }
 }

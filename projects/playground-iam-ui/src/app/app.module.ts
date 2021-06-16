@@ -6,11 +6,12 @@ import { AppComponent } from './app.component';
 import { WelcomeModule } from './module/welcome/welcome.module';
 import { PlaygroundModule } from './module/playground/playground.module';
 import { DocumentationModule } from './module/documentation/documentation.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     WelcomeModule,
     PlaygroundModule,

@@ -2,8 +2,11 @@
 
 <div class="container">
   <div class="add-container__padding">
-    <ngx-tree [title]="'ramiro'" [iconArrow]="true"></ngx-tree>
+    <ngx-tree>
+      <ngx-tree-node *ngFor="let item of items">
+        <ngx-icon-default [animationState]="state" icon [icon]="'arrow' "></ngx-icon-default>
+        <ng-container content>ramiro</ng-container>
+      </ngx-tree-node>
+    </ngx-tree>
   </div>
-
-  <ngx-icon-default [icon]="'arrow'"></ngx-icon-default>
 </div>
