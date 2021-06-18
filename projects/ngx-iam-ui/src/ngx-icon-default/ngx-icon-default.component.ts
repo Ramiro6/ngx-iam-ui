@@ -33,7 +33,7 @@ export type typeIcon = 'arrow';
   // eslint-disable-next-line @angular-eslint/no-host-metadata-property
   host: {
     '(click)': 'rotate()',
-    '[@openClose]': 'animationState ? "open" : "close"',
+    '[@openClose]': 'state ? "open" : "close"',
   },
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
@@ -52,6 +52,7 @@ export class NgxIconDefaultComponent implements OnChanges {
     private registrationService: NgxRegistrationService
   ) {}
   private _icon: typeIcon;
+  state: boolean = false;
   @Input() set icon(iconName: typeIcon) {
     this._icon = iconName;
   }

@@ -3,10 +3,18 @@
 <div class="container">
   <div class="add-container__padding">
     <ngx-tree>
-      <ngx-tree-node *ngFor="let item of items">
-        <ngx-icon-default [animationState]="state" icon [icon]="'arrow' "></ngx-icon-default>
-        <ng-container content>ramiro</ng-container>
-      </ngx-tree-node>
+      <ng-container *ngFor="let item of items; index as childId">
+        <ngx-tree-node #treeChild (clickEvent)="onChangeState(childId)">
+          <ngx-icon-default icon [icon]="'arrow' "></ngx-icon-default>
+          <ng-container content>{{ item.label }}</ng-container>
+        </ngx-tree-node>
+<!--        child.getAttribute('aria-expanded')-->
+        <ng-container *ngIf="item.children && childTreeState?.get(childId)?.isExpanded">
+          <ngx-tree-node class="padding-test" *ngFor="let chItem of item.children">
+            <ng-container content>{{ chItem?.label }}</ng-container>
+          </ngx-tree-node>
+        </ng-container>
+      </ng-container>
     </ngx-tree>
   </div>
 </div>

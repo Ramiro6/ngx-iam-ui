@@ -3,13 +3,15 @@ import {
   EventEmitter,
   HostBinding,
   HostListener,
-  Output,
+  Output, ViewContainerRef,
 } from '@angular/core';
 
-@Directive({ selector: '[ngxExpanded]' })
-export class ngxExpandedDirective {
+@Directive({ selector: '[NgxExpanded]' })
+export class NgxExpandedDirective {
   private _state: boolean = false;
-  @Output() pushState: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+  constructor(public ctw: ViewContainerRef) {
+  }
 
   @HostBinding('attr.aria-expanded') get setState(): boolean {
     return this._state;
@@ -17,9 +19,5 @@ export class ngxExpandedDirective {
 
   @HostListener('click') onClick(): void {
     this._state = !this._state;
-  }
-
-  get state(): boolean {
-    return this._state;
   }
 }

@@ -27,9 +27,7 @@
         "*.html"
       ],
       "extends": ["plugin:@angular-eslint/template/recommended"],
-      "rules": {
-        "no-restricted-imports": ["error", "import1", "import2"]
-      }
+      "rules": {}
     }
   ]
 }

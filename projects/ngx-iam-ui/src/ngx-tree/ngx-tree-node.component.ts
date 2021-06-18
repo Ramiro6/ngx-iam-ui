@@ -1,14 +1,5 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  ContentChild,
-  ElementRef,
-  EventEmitter,
-  Output,
-} from '@angular/core';
-
-// import { NgxIconDefaultComponent } from '../ngx-icon-default/ngx-icon-default.component';
-import { ngxExpandedDirective } from './ngx-expanded.directive';
+import { ChangeDetectionStrategy, Component, ContentChild, EventEmitter, Output, } from '@angular/core';
+import { NgxIconDefaultComponent } from '@ngx-iam-ui/components/ngx-icon-default';
 
 @Component({
   selector: 'ngx-tree-node',
@@ -29,22 +20,22 @@ import { ngxExpandedDirective } from './ngx-expanded.directive';
   ],
   // eslint-disable-next-line @angular-eslint/no-host-metadata-property
   host: {
+    '[attr.aria-expanded]': 'isExpanded',
     '(click)': 'onCLickEvent()',
   },
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NgxTreeNodeComponent {
-  @ContentChild(ngxExpandedDirective)
-  stateIcon: ngxExpandedDirective;
+  isExpanded: boolean = false;
+  @ContentChild(NgxIconDefaultComponent) stateIcon: NgxIconDefaultComponent;
   @Output() clickEvent: EventEmitter<any> = new EventEmitter<any>();
-  constructor(private el: ElementRef) {}
+  constructor() {}
 
   onCLickEvent() {
-    debugger;
-    // this.el.nativeElement.getAttribute('aria-expanded')
-    // if (this.stateIcon) {
-    //   // this.stateIcon.state = this.stateIcon.state === 'open' ? 'close' : 'open';
-    //   console.log(this.stateIcon);
-    // }
+    if (this.stateIcon) {
+      this.isExpanded = !this.isExpanded;
+      this.stateIcon.state = this.isExpanded;
+    }
+    this.clickEvent.emit();
   }
 }

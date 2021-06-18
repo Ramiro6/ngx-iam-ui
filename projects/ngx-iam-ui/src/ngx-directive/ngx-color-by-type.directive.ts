@@ -2,7 +2,7 @@ import { Directive, HostBinding, Input } from '@angular/core';
 
 export type colorType = 'primary' | 'danger' | 'grey' | 'light';
 
-@Directive({ selector: '[ngxSetColor]' })
+@Directive({ selector: '[NgxSetColor]' })
 export class NgxColorByTypeDirective {
   @Input() getColor: colorType;
 

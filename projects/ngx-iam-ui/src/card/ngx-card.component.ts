@@ -4,6 +4,7 @@ import {
   Input,
   OnInit,
 } from '@angular/core';
+import { colorType } from '@ngx-iam-ui/components/ngx-directive';
 
 @Component({
   selector: 'ngx-card',
@@ -22,7 +23,7 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NgxCardComponent implements OnInit {
-  @Input() ngxColor: any;
+  @Input() ngxColor: colorType;
   @Input() ngxWidth: string = '18rem';
   constructor() {}
 
