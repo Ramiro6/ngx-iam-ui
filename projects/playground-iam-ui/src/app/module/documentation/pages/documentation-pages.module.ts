@@ -6,6 +6,8 @@ import { CardComponent } from './card/card.component';
 import { NgxSideNavModule } from '../../../../../../ngx-iam-ui/src/ngx-side-nav';
 import { NgxCardModule } from '../../../../../../ngx-iam-ui/src/card/ngx-card.module';
 import { NgxCardPageModule } from '../../../../../../ngx-iam-ui/src/card-page/ngx-card-page.module';
+import { NgxTreeModule } from '@ngx-iam-ui/components/ngx-tree';
+import { NgxIconDefaultModule } from '@ngx-iam-ui/components/ngx-icon-default';
 
 export const ROUTES: Routes = [
   {
@@ -28,6 +30,8 @@ export const ROUTES: Routes = [
     NgxCardModule,
     RouterModule.forChild(ROUTES),
     NgxCardPageModule,
+    NgxTreeModule,
+    NgxIconDefaultModule,
   ],
 })
 export class DocumentationPagesModule {}

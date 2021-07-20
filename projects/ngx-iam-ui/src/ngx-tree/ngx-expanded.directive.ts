@@ -1,17 +1,10 @@
-import {
-  Directive,
-  EventEmitter,
-  HostBinding,
-  HostListener,
-  Output, ViewContainerRef,
-} from '@angular/core';
+import { Directive, HostBinding, HostListener, ViewContainerRef, } from '@angular/core';
 
 @Directive({ selector: '[NgxExpanded]' })
 export class NgxExpandedDirective {
   private _state: boolean = false;
 
-  constructor(public ctw: ViewContainerRef) {
-  }
+  constructor(public ctw: ViewContainerRef) {}
 
   @HostBinding('attr.aria-expanded') get setState(): boolean {
     return this._state;

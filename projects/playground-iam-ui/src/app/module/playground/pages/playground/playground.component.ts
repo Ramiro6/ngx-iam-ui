@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit, QueryList, ViewChildren } from '@angular/core';
-import { NgxTreeNodeComponent } from '../../../../../../../ngx-iam-ui/src/ngx-tree/ngx-tree-node.component';
+import { NgxTreeNodeComponent } from '@ngx-iam-ui/components/ngx-tree';
 
 @Component({
   selector: 'app-playground',
@@ -21,7 +21,7 @@ export class PlaygroundComponent implements OnInit, AfterViewInit {
         children: [
           {
             label: 'Card',
-            data: 'card-id',
+            data: 'card',
           },
           {
             label: 'Card Page',
@@ -73,5 +73,9 @@ export class PlaygroundComponent implements OnInit, AfterViewInit {
     // this.childTreeState.find((select) => select.id === indexChild);
     // debugger;
     // this.state = getState;
+  }
+
+  onCLick(itemFromArray: any) {
+    console.log(itemFromArray);
   }
 }

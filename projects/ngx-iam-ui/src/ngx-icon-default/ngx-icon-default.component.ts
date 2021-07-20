@@ -22,14 +22,7 @@ export type typeIcon = 'arrow';
 @Component({
   selector: 'ngx-icon-default',
   template: ``,
-  styles: [
-    `
-      :host {
-        padding-left: 5px;
-        padding-right: 5px;
-      }
-    `,
-  ],
+  styles: [``],
   // eslint-disable-next-line @angular-eslint/no-host-metadata-property
   host: {
     '(click)': 'rotate()',

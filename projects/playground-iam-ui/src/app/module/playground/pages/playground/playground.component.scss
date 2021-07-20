@@ -4,9 +4,12 @@
   }
 }
 
-//.padding-test {
-//  button {
-//    padding-left: 20px;
+//:host ::ng-deep .padding-test {
+//  .ngx-tree-node__box {
+//    padding-left: 30px;
+//  }
+//  .is-select {
+//    background-color: black;
 //  }
 //}
 

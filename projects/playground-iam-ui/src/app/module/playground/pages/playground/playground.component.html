@@ -6,15 +6,21 @@
       <ng-container *ngFor="let item of items; index as childId">
         <ngx-tree-node #treeChild (clickEvent)="onChangeState(childId)">
           <ngx-icon-default icon [icon]="'arrow' "></ngx-icon-default>
-          <ng-container content>{{ item.label }}</ng-container>
+          <button content>{{ item.label }}</button>
+<!--          <ng-container content>{{ item.label }}</ng-container>-->
         </ngx-tree-node>
 <!--        child.getAttribute('aria-expanded')-->
         <ng-container *ngIf="item.children && childTreeState?.get(childId)?.isExpanded">
-          <ngx-tree-node class="padding-test" *ngFor="let chItem of item.children">
-            <ng-container content>{{ chItem?.label }}</ng-container>
+          <ngx-tree-node class="padding-test" *ngFor="let chItem of item.children" (clickEvent)="onCLick(chItem)">
+<!--            [routerLink]="['./', chItem.data]"-->
+            <button content [routerLink]="['./', chItem.data]" routerLinkActive="is-select">{{ chItem.label }}</button>
+<!--            <ng-container content>{{ chItem.label }}</ng-container>-->
           </ngx-tree-node>
         </ng-container>
       </ng-container>
     </ngx-tree>
   </div>
 </div>
+
+
+<router-outlet></router-outlet>

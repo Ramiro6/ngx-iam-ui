@@ -18,7 +18,10 @@
       "dom"
     ],
     "paths": {
-      "@ngx-iam-ui/components": ["projects/ngx-iam-ui/src/public-api.ts"],
+      "@ngx-iam-ui/components": [
+        "projects/ngx-iam-ui/src/public-api.ts",
+        "dist/ngx-iam-ui/*/public-api.ts"
+      ],
       "@ngx-iam-ui/components/*": ["projects/ngx-iam-ui/src/*/public-api.ts"]
     },
     "allowSyntheticDefaultImports": true
