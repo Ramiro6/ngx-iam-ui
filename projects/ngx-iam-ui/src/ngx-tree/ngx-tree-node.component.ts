@@ -12,42 +12,10 @@ import { NgxIconDefaultComponent } from '@ngx-iam-ui/components/ngx-icon-default
 
 @Component({
   selector: 'ngx-tree-node',
-  template: `<div class="ngx-tree-node__box" select="['content']">
-    <ng-content select="['icon']"></ng-content>
+  template: `<div class="ngx-tree-node__box">
     <ng-content></ng-content>
   </div>`,
-  styles: [
-    `
-      .ngx-insert__s {
-        padding-left: 10px;
-        padding-right: 10px;
-      }
-      .ngx-insert__m {
-        padding-left: 26px;
-      }
-
-      button {
-        padding: 7px;
-        border: none;
-        display: block;
-        width: 100%;
-        text-align: start;
-        background: transparent;
-      }
-
-      .ngx-tree-node__box {
-        /*padding-left: 5px;*/
-        /*padding-right: 5px;*/
-        font-size: 16px;
-        display: flex;
-        align-items: center;
-      }
-
-      .is-select {
-        background-color: var(--primary-color);
-      }
-    `,
-  ],
+  styleUrls: ['./ngx-tree-node.component.scss'],
   // eslint-disable-next-line @angular-eslint/no-host-metadata-property
   host: {
     '[attr.aria-expanded]': 'isExpanded',

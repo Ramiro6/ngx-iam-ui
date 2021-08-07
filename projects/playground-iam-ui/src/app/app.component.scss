@@ -2,6 +2,7 @@ body {
   background-color: #eeeeee;
   font-family: 'Helvetica';
   margin: 0px;
+  font-size: 1.1rem;
 }
 
 
@@ -10,4 +11,6 @@ body {
   --danger-color: #d32f2f;
   --grey-color: #eeeeee;
   --light-color: #ffffff;
+  --hover-primary-color: rgba(196, 195, 195, 0.58);
+  --sidebar-background-color: rgba(255, 255, 255, 0.88)
 }

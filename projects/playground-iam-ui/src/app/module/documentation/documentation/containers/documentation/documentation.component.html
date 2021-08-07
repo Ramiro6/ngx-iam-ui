@@ -1,0 +1,32 @@
+<ngx-side-panel>
+  <ngx-side-aside>
+    <ngx-tree>
+      <ngx-tree-node>
+        <button>
+          defaulttt!!!
+        </button>
+      </ngx-tree-node>
+      <ng-container *ngFor="let item of items; index as childId">
+        <ngx-tree-node #treeChild (clickEvent)="onChangeState(childId)">
+          <button>
+            <ngx-icon-default [icon]="'arrow'"></ngx-icon-default>
+            {{ item.label }}
+          </button>
+        </ngx-tree-node>
+        <ng-container *ngIf="item.children && childTreeState?.get(childId)?.isExpanded">
+          <ngx-tree-node *ngFor="let chItem of item.children" (clickEvent)="onCLick(chItem)">
+            <button setSize="m" [routerLink]="['./', chItem.data]" routerLinkActive="is-select">
+              <ngx-icon-default NgxPadding setSize="s" icon></ngx-icon-default>
+              {{ chItem.label }}
+            </button>
+          </ngx-tree-node>
+        </ng-container>
+      </ng-container>
+    </ngx-tree>
+  </ngx-side-aside>
+
+  <ngx-side-main>
+    <router-outlet></router-outlet>
+  </ngx-side-main>
+
+</ngx-side-panel>

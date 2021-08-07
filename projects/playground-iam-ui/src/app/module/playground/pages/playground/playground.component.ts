@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { NgxTreeNodeComponent } from '@ngx-iam-ui/components/ngx-tree';
 
 @Component({
@@ -6,7 +6,7 @@ import { NgxTreeNodeComponent } from '@ngx-iam-ui/components/ngx-tree';
   templateUrl: './playground.component.html',
   styleUrls: ['./playground.component.scss'],
 })
-export class PlaygroundComponent implements OnInit, AfterViewInit {
+export class PlaygroundComponent implements OnInit {
   @ViewChildren('treeChild') childTreeState: QueryList<NgxTreeNodeComponent>;
   state: boolean;
   items: any[];
@@ -52,15 +52,6 @@ export class PlaygroundComponent implements OnInit, AfterViewInit {
       },
     ];
   }
-
-  ngAfterViewInit() {
-    console.log('dasdads');
-    // console.log(this.childTreeState.toArray());
-  }
-
-  // identify(index) {
-  //   return index;
-  // }
 
   onChangeState(indexChild: number): void {
     this.state = (this.childTreeState.get(indexChild) as any).isExpanded;

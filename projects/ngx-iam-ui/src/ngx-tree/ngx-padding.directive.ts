@@ -1,12 +1,13 @@
 import { Directive, HostBinding, Input } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+// import { DomSanitizer } from '@angular/platform-browser';
 
 export type NgxPaddingSize = 's' | 'm';
 
 @Directive({ selector: '[NgxPadding]' })
 export class NgxPaddingDirective {
   @Input() setSize: NgxPaddingSize;
-  constructor(private _sanitizer: DomSanitizer) {}
+  // private _sanitizer: DomSanitizer
+  constructor() {}
 
   @HostBinding('class.ngx-insert__s') get setPaddingS(): boolean {
     return this.setSize === 's';

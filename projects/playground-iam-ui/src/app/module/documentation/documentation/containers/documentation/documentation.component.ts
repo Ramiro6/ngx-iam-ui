@@ -1,5 +1,5 @@
 import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
-import { NgxTreeNodeComponent } from '../../../../../../../ngx-iam-ui/src/ngx-tree/ngx-tree-node.component';
+import { NgxTreeNodeComponent } from '../../../../../../../../ngx-iam-ui/src/ngx-tree/ngx-tree-node.component';
 
 @Component({
   selector: 'app-documentation',
@@ -15,6 +15,7 @@ export class DocumentationComponent implements OnInit {
     this.items = [
       {
         label: 'Another',
+        redirect: 'documentation',
       },
       {
         label: 'Components',

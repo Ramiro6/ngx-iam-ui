@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DocumentationComponent } from './documentation/documentation.component';
-import { RouterModule, Routes } from '@angular/router';
-import { CardComponent } from './card/card.component';
-import { NgxSideNavModule } from '../../../../../../ngx-iam-ui/src/ngx-side-nav';
-import { NgxCardModule } from '../../../../../../ngx-iam-ui/src/card/ngx-card.module';
-import { NgxCardPageModule } from '../../../../../../ngx-iam-ui/src/card-page/ngx-card-page.module';
 import { NgxTreeModule } from '@ngx-iam-ui/components/ngx-tree';
 import { NgxIconDefaultModule } from '@ngx-iam-ui/components/ngx-icon-default';
+import { RouterModule, Routes } from '@angular/router';
+import { DocumentationComponent } from './containers/documentation/documentation.component';
+import { CardComponent } from '../card/containers/card/card.component';
+import { NgxSideNavModule } from '../../../../../../ngx-iam-ui/src/ngx-side-nav';
 
 export const ROUTES: Routes = [
   {
@@ -16,7 +14,8 @@ export const ROUTES: Routes = [
     children: [
       {
         path: 'card',
-        component: CardComponent,
+        loadChildren: () =>
+          import('../card/card.module').then((m) => m.CardModule),
       },
     ],
   },
@@ -27,11 +26,9 @@ export const ROUTES: Routes = [
   imports: [
     CommonModule,
     NgxSideNavModule,
-    NgxCardModule,
     RouterModule.forChild(ROUTES),
-    NgxCardPageModule,
     NgxTreeModule,
     NgxIconDefaultModule,
   ],
 })
-export class DocumentationPagesModule {}
+export class DocumentationPageModule {}

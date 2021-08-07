@@ -22,10 +22,15 @@ export type typeIcon = 'arrow';
 @Component({
   selector: 'ngx-icon-default',
   template: ``,
-  styles: [``],
+  styles: [
+    `
+      :host {
+        display: inline-block;
+      }
+    `,
+  ],
   // eslint-disable-next-line @angular-eslint/no-host-metadata-property
   host: {
-    '(click)': 'rotate()',
     '[@openClose]': 'state ? "open" : "close"',
   },
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -72,11 +77,5 @@ export class NgxIconDefaultComponent implements OnChanges {
   private _renderSvg(svg: any): void {
     const svgSanitize = this._sanitizer.sanitize(SecurityContext.HTML, svg);
     this.el.nativeElement.innerHTML = svgSanitize;
-  }
-
-  rotate() {
-    debugger;
-    // this.state = this.state === 'open' ? 'close' : 'open';
-    // console.log(this.state);
   }
 }

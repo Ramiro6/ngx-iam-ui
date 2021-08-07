@@ -1,8 +1,15 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 // welcome
 const ROUTES: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'playground' },
+  { path: '', pathMatch: 'full', redirectTo: 'documentation' },
+  // {
+  //   path: 'documentation',
+  //   loadChildren: () =>
+  //     import('./module/documentation/documentation.module').then(
+  //       (m) => m.DocumentationModule
+  //     ),
+  // },
 ];
 
 @NgModule({

@@ -1,0 +1,30 @@
+.ngx-insert__s {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.ngx-insert__m {
+  padding-left: 26px;
+}
+
+/*remove class button*/
+
+.ngx-tree-node__box {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  button {
+    padding: 10px;
+    border: none;
+    display: block;
+    width: 100%;
+    font-size: inherit;
+    text-align: start;
+    background: transparent;
+    &:hover {
+      background-color: var(--hover-primary-color);
+    }
+  }
+  .is-select {
+    background-color: var(--hover-primary-color);
+  }
+}
