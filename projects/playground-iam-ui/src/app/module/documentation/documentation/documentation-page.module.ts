@@ -5,7 +5,7 @@ import { NgxIconDefaultModule } from '@ngx-iam-ui/components/ngx-icon-default';
 import { RouterModule, Routes } from '@angular/router';
 import { DocumentationComponent } from './containers/documentation/documentation.component';
 import { CardComponent } from '../card/containers/card/card.component';
-import { NgxSideNavModule } from '../../../../../../ngx-iam-ui/src/ngx-side-nav';
+import { NgxSideNavModule } from '@ngx-iam-ui/components/ngx-side-nav';
 
 export const ROUTES: Routes = [
   {

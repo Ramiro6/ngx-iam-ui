@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  ContentChild,
+} from '@angular/core';
+import { NgxSideMainComponent } from '../ngx-side-main/ngx-side-main.component';
 
 @Component({
   selector: 'ngx-side-panel',
@@ -6,4 +12,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./ngx-side-panel.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NgxSidePanelComponent {}
+export class NgxSidePanelComponent implements AfterViewInit {
+  @ContentChild(NgxSideMainComponent) sideMain: NgxSideMainComponent;
+  ngAfterViewInit() {
+    console.log('side', this.sideMain);
+  }
+}
