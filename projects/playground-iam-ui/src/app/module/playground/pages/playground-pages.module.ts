@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgxTreeModule } from '@ngx-iam-ui/components/ngx-tree';
 import { NgxIconDefaultModule } from '@ngx-iam-ui/components/ngx-icon-default';
 import { NgxTabRouterModule } from '@ngx-iam-ui/components/ngx-tab-router';
+import { NgxCardModule } from '@ngx-iam-ui/components/ngx-card';
 
 export const ROUTES: Routes = [
   { path: '', component: PlaygroundComponent },
@@ -20,6 +21,7 @@ export const ROUTES: Routes = [
     NgxTreeModule,
     NgxIconDefaultModule,
     NgxTabRouterModule,
+    NgxCardModule,
   ],
 })
 export class PlaygroundPagesModule {}

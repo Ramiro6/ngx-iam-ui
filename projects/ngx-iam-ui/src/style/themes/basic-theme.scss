@@ -5,4 +5,16 @@ $colors: (
   ngx-color__danger: var(--danger-color),
   ngx-color__grey: var(--grey-color),
   ngx-color__light: var(--light-color),
+  ngx-color-border__primary: var(--border-primary-color),
+  ngx-color-box__shadow: var(--box-shadow-color),
+  ngx-color-hover__primary: var(--hover-primary-color),
+  ngx-color-sidebar__background: var(--sidebar-background-color),
+  ngx-color-nav__background: var(--nav-background-color),
 );
+
+
+@each $name, $color in $colors {
+  .#{$name} {
+    background-color: $color;
+  }
+}

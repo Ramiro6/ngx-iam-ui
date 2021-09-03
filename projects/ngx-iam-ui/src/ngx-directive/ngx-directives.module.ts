@@ -3,7 +3,7 @@ import { NgxColorByTypeDirective } from './ngx-color-by-type.directive';
 
 @NgModule({
   exports: [NgxColorByTypeDirective],
-  declarations: [NgxColorByTypeDirective]
+  declarations: [NgxColorByTypeDirective],
 })
 export class NgxDirectiveModule {
   constructor() {

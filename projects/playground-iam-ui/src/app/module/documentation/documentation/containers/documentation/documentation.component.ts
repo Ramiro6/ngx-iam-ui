@@ -1,7 +1,5 @@
 import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { NgxTreeNodeComponent } from '../../../../../../../../ngx-iam-ui/src/ngx-tree/ngx-tree-node.component';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-documentation',
@@ -13,21 +11,7 @@ export class DocumentationComponent implements OnInit {
   state: boolean;
   items: any[];
 
-  constructor(private route: Router, private activateRoute: ActivatedRoute) {
-    this.activateRoute.data.subscribe({
-      next: value => {
-        console.log(value);
-      },
-    });
-    // this.route.events
-    //   .pipe(filter((event) => event instanceof NavigationEnd))
-    //   .subscribe({
-    //     next: (value) => {
-    //       console.log('Events', value);
-    //     },
-    // });
-    // this.activateRoute.data.subscribe(data => console.log(data));
-  }
+  constructor() {}
 
   ngOnInit() {
     this.items = [

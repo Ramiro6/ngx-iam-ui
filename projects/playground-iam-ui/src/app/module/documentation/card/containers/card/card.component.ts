@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Data, Router } from '@angular/router';
 
 @Component({
   selector: 'app-card',
@@ -8,6 +8,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CardComponent {
   constructor(private route: Router, private activateRoute: ActivatedRoute) {
+    this.activateRoute.data.subscribe({
+      next: (value: Data) => console.log('Data', value.name),
+    });
   }
-
 }
