@@ -1,0 +1,39 @@
+@mixin box($color) {
+  background-color: lighten($color, 10%);
+}
+
+.ngx-tab-router__box {
+  display: flex;
+  align-items: center;
+  height: 18px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 2px solid var(--primary-color);
+  button {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    display: block;
+    //width: 100%;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: start;
+    background-color: transparent;
+  //lighten(var(--primary-color), 80%);
+    &:first-child {
+      border-top-left-radius: 10px;
+    }
+    &:last-child {
+      border-top-right-radius: 10px;
+    }
+    &:hover {
+      //border-top-left-radius: 10px;
+      border-bottom: 2px solid var(--primary-color);
+      background-color: var(--hover-primary-color);
+    }
+  }
+  .is-select {
+    border-bottom: 2px solid var(--primary-color);
+    background-color: var(--hover-primary-color);
+  }
+}

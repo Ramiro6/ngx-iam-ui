@@ -1,26 +1,34 @@
 <p>playground works!</p>
 
-<div class="container">
-  <div class="add-container__padding">
-    <ngx-tree>
-      <ng-container *ngFor="let item of items; index as childId">
-        <ngx-tree-node #treeChild (clickEvent)="onChangeState(childId)">
-          <button>
-            <ngx-icon-default icon [icon]="'arrow' "></ngx-icon-default>
-            {{ item.label }}
-          </button>
-        </ngx-tree-node>
-        <ng-container *ngIf="item.children && childTreeState?.get(childId)?.isExpanded">
-          <ngx-tree-node class="padding-test" *ngFor="let chItem of item.children" (clickEvent)="onCLick(chItem)">
-            <button [routerLink]="['./', chItem.data]" routerLinkActive="is-select">
-              <ngx-icon-default NgxPadding setSize="s" icon></ngx-icon-default>
-              {{ chItem.label }}</button>
-          </ngx-tree-node>
-        </ng-container>
-      </ng-container>
-    </ngx-tree>
-  </div>
-</div>
+<!--<div class="container">-->
+<!--  <div class="add-container__padding">-->
+<!--    <ngx-tree>-->
+<!--      <ng-container *ngFor="let item of items; index as childId">-->
+<!--        <ngx-tree-node #treeChild (clickEvent)="onChangeState(childId)">-->
+<!--          <button>-->
+<!--            <ngx-icon-default icon [icon]="'arrow' "></ngx-icon-default>-->
+<!--            {{ item.label }}-->
+<!--          </button>-->
+<!--        </ngx-tree-node>-->
+<!--        <ng-container *ngIf="item.children && childTreeState?.get(childId)?.isExpanded">-->
+<!--          <ngx-tree-node class="padding-test" *ngFor="let chItem of item.children" (clickEvent)="onCLick(chItem)">-->
+<!--            <button [routerLink]="['./', chItem.data]" routerLinkActive="is-select">-->
+<!--              <ngx-icon-default NgxPadding setSize="s" icon></ngx-icon-default>-->
+<!--              {{ chItem.label }}</button>-->
+<!--          </ngx-tree-node>-->
+<!--        </ng-container>-->
+<!--      </ng-container>-->
+<!--    </ngx-tree>-->
+<!--  </div>-->
+<!--</div>-->
 
+<div class="container">
+  <ngx-tab-router>
+    <button>Overview</button>
+    <button>Api</button>
+    <button>Examples</button>
+  </ngx-tab-router>
+
+</div>
 
 <router-outlet></router-outlet>

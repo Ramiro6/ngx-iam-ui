@@ -1,5 +1,5 @@
-<ngx-side-nav-panel></ngx-side-nav-panel>
 <ngx-side-panel>
+  <ngx-side-nav-panel></ngx-side-nav-panel>
   <ngx-side-aside class="box-shadow-apply">
     <ngx-tree>
       <ngx-tree-node>
@@ -16,7 +16,7 @@
         </ngx-tree-node>
         <ng-container *ngIf="item.children && childTreeState?.get(childId)?.isExpanded">
           <ngx-tree-node *ngFor="let chItem of item.children" (clickEvent)="onCLick(chItem)">
-            <button setSize="m" [routerLink]="['./', chItem.data]" routerLinkActive="is-select">
+            <button setSize="m" [routerLink]="['./', chItem.data]" [state]="{ name: 'State Documentation' }" routerLinkActive="is-select">
               <ngx-icon-default NgxPadding setSize="s" icon></ngx-icon-default>
               {{ chItem.label }}
             </button>
@@ -28,20 +28,20 @@
 
   <ngx-side-main>
     <router-outlet></router-outlet>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>
+<!--    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>-->
+<!--    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>-->
+<!--    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>-->
+<!--    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>-->
+<!--    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>-->
+<!--    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>-->
+<!--    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>-->
+<!--    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>-->
+<!--    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>-->
+<!--    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>-->
+<!--    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>-->
+<!--    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>-->
+<!--    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>-->
+<!--    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur cum cupiditate deserunt dolorum modi nulla officia omnis pariatur porro quae reprehenderit rerum sapiente, tempore veniam! Aut quae quos sapiente?</h1>-->
   </ngx-side-main>
 
 </ngx-side-panel>
