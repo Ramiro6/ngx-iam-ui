@@ -38,8 +38,8 @@ export type typeIcon = 'arrow';
     trigger('openClose', [
       state('open', style({ transform: 'rotate(0)' })),
       state('close', style({ transform: 'rotate(-90deg)' })),
-      transition('close => open', animate('100ms ease-out')),
-      transition('open => close', animate('100ms ease-in')),
+      // transition('close => open', animate('100ms ease-out')),
+      // transition('open => close', animate('100ms ease-in')),
     ]),
   ],
 })

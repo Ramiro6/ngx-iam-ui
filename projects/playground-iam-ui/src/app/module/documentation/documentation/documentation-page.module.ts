@@ -5,6 +5,7 @@ import { NgxIconDefaultModule } from '@ngx-iam-ui/components/ngx-icon-default';
 import { RouterModule, Routes } from '@angular/router';
 import { DocumentationComponent } from './containers/documentation/documentation.component';
 import { NgxSideNavModule } from '@ngx-iam-ui/components/ngx-side-nav';
+import { NgxCardModule } from '@ngx-iam-ui/components/ngx-card';
 
 export const ROUTES: Routes = [
   {
@@ -13,6 +14,7 @@ export const ROUTES: Routes = [
     children: [
       {
         path: 'card',
+        data: { treeName: 'card' },
         loadChildren: () =>
           import('../card/card.module').then((m) => m.CardModule),
       },
@@ -27,6 +29,7 @@ export const ROUTES: Routes = [
     NgxSideNavModule,
     RouterModule.forChild(ROUTES),
     NgxTreeModule,
+    NgxCardModule,
     NgxIconDefaultModule,
   ],
 })

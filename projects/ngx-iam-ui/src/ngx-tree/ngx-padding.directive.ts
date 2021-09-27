@@ -7,7 +7,6 @@ export type NgxPaddingSize = 's' | 'm';
 export class NgxPaddingDirective {
   @Input() setSize: NgxPaddingSize;
   // private _sanitizer: DomSanitizer
-  constructor() {}
 
   @HostBinding('class.ngx-insert__s') get setPaddingS(): boolean {
     return this.setSize === 's';

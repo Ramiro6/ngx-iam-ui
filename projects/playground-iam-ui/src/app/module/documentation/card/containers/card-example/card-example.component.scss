@@ -1,0 +1,25 @@
+.add-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.justify-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.flex-item {
+  margin: 10px auto;
+}
+
+
+.placeholder-svg__img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+}
+
+ngx-card {
+  margin-bottom: 20px;
+}

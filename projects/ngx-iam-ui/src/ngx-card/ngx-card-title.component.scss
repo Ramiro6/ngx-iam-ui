@@ -1,0 +1,14 @@
+@import "../style/themes/basic-theme";
+@import "../style/themes/ngx-border";
+
+ngx-card-title {
+  display: block;
+  padding: 10px 10px 2px;
+
+  /*if is radius*/
+  border-radius: .9rem .9rem 0 0;
+  //border-bottom: var(--border-primary-color);
+
+  //border: var(--border-primary-color);
+}
+

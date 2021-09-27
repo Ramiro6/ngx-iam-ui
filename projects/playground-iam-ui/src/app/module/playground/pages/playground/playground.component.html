@@ -1,32 +1,49 @@
 <p>playground works!</p>
 
-<!--<div class="container">-->
-<!--  <div class="add-container__padding">-->
-<!--    <ngx-tree>-->
-<!--      <ng-container *ngFor="let item of items; index as childId">-->
-<!--        <ngx-tree-node #treeChild (clickEvent)="onChangeState(childId)">-->
-<!--          <button>-->
-<!--            <ngx-icon-default icon [icon]="'arrow' "></ngx-icon-default>-->
-<!--            {{ item.label }}-->
-<!--          </button>-->
-<!--        </ngx-tree-node>-->
-<!--        <ng-container *ngIf="item.children && childTreeState?.get(childId)?.isExpanded">-->
-<!--          <ngx-tree-node class="padding-test" *ngFor="let chItem of item.children" (clickEvent)="onCLick(chItem)">-->
-<!--            <button [routerLink]="['./', chItem.data]" routerLinkActive="is-select">-->
-<!--              <ngx-icon-default NgxPadding setSize="s" icon></ngx-icon-default>-->
-<!--              {{ chItem.label }}</button>-->
-<!--          </ngx-tree-node>-->
-<!--        </ng-container>-->
-<!--      </ng-container>-->
-<!--    </ngx-tree>-->
-<!--  </div>-->
-<!--</div>-->
-
 <div class="container">
   <ngx-card>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam at cupiditate ea error et fuga id incidunt, ipsa libero natus nihil nisi obcaecati optio perferendis quam sapiente sequi velit, veniam!</p>
+    <ngx-card-title NgxBorder [typeBorder]="'bottom'" NgxSetColor [getColor]="'primary'">Card Example</ngx-card-title>
+    <ngx-card-content>
+      <div NgxFlex="column">
+        <ngx-card class="flex-item" [ngxWidth]="'16rem'" NgxSetColor [getColor]="'light'">
+          <ngx-card-title>
+            <svg class="placeholder-svg__img" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <rect width="100%" height="100%" fill="#868e96"></rect>
+              <text x="50%" y="50%" fill="#dee2e6" dy=".1em">Image</text>
+            </svg>
+          </ngx-card-title>
+          <ngx-card-content>
+            <h3>Card</h3>
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam at cupiditate ea error et fuga id incidunt, ipsa libero natus nihil nisi obcaecati optio perferendis quam sapiente sequi velit, veniam!</span>
+          </ngx-card-content>
+        </ngx-card>
+        <ngx-card class="flex-item" [ngxWidth]="'16rem'" NgxSetColor [getColor]="'danger'">
+          <ngx-card-title>
+            <svg class="placeholder-svg__img" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <rect width="100%" height="100%" fill="#868e96"></rect>
+              <text x="50%" y="50%" fill="#dee2e6" dy=".1em">Image</text>
+            </svg>
+          </ngx-card-title>
+          <ngx-card-content>
+            <h3>Card</h3>
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam at cupiditate ea error et fuga id incidunt, ipsa libero natus nihil nisi obcaecati optio perferendis quam sapiente sequi velit, veniam!</span>
+          </ngx-card-content>
+        </ngx-card>
+        <ngx-card class="flex-item" [ngxWidth]="'16rem'" NgxSetColor [getColor]="'primary'">
+          <ngx-card-title>
+            <svg class="placeholder-svg__img" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <rect width="100%" height="100%" fill="#868e96"></rect>
+              <text x="50%" y="50%" fill="#dee2e6" dy=".1em">Image</text>
+            </svg>
+          </ngx-card-title>
+          <ngx-card-content>
+            <h3>Card</h3>
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam at cupiditate ea error et fuga id incidunt, ipsa libero natus nihil nisi obcaecati optio perferendis quam sapiente sequi velit, veniam!</span>
+          </ngx-card-content>
+        </ngx-card>
+      </div>
+    </ngx-card-content>
   </ngx-card>
-
 
 </div>
 

@@ -1,0 +1,12 @@
+$borders: (
+  ngx-border__bottom: border-bottom,
+  ngx-border__left: border-left,
+  ngx-border__right: border-right,
+  ngx-border__top: border-top
+);
+
+@each $name, $type in $borders {
+  .#{$name} {
+    #{$type}: var(--border-primary-color);;
+  }
+}

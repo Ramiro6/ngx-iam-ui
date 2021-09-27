@@ -8,8 +8,7 @@ import { NgxCardModule } from '@ngx-iam-ui/components/ngx-card';
 import { CardOverviewComponent } from './containers/card-overview/card-overview.component';
 import { CardApiComponent } from './containers/card-api/card-api.component';
 import { CardExampleComponent } from './containers/card-example/card-example.component';
-import { NgxCardPageModule } from '@ngx-iam-ui/components/ngx-card-page';
-import { NgxDirectiveModule } from '../../../../../../ngx-iam-ui/src/ngx-directive/ngx-directives.module';
+import { NgxDirectiveModule } from '@ngx-iam-ui/components/ngx-directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,6 @@ import { NgxDirectiveModule } from '../../../../../../ngx-iam-ui/src/ngx-directi
     SharedModule,
     NgxCardModule,
     NgxDirectiveModule,
-    NgxCardPageModule,
   ],
 })
 export class CardModule {}

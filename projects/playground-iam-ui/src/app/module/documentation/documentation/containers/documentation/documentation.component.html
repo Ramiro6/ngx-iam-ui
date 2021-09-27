@@ -2,27 +2,39 @@
   <ngx-side-nav-panel></ngx-side-nav-panel>
   <ngx-side-aside class="box-shadow-apply">
     <ngx-tree>
-      <ngx-tree-node>
-        <button>
-          defaulttt!!!
-        </button>
-      </ngx-tree-node>
       <ng-container *ngFor="let item of items; index as childId">
-        <ngx-tree-node #treeChild (clickEvent)="onChangeState(childId)">
-          <button>
-            <ngx-icon-default [icon]="'arrow'"></ngx-icon-default>
+        <ngx-tree-node #treeChild (clickEvent)="onChangeState(childId)" [getItem]="item">
+          <button *ngIf="!item?.children else withChild" [routerLinkActiveOptions]="{ exact: true }" [routerLink]="[item?.redirect]" routerLinkActive="is-select">
+            <ngx-icon-default *ngIf="item?.icon else showIcon" [icon]="item?.icon"></ngx-icon-default>
+            <ng-template #showIcon>
+              <span NgxPadding setSize="s"></span>
+            </ng-template>
             {{ item.label }}
           </button>
+          <ng-template #withChild>
+            <button>
+              <ngx-icon-default *ngIf="item?.icon else showIcon" [icon]="item?.icon"></ngx-icon-default>
+              <ng-template #showIcon>
+                <span NgxPadding setSize="s"></span>
+              </ng-template>
+              {{ item.label }}
+            </button>
+          </ng-template>
         </ngx-tree-node>
         <ng-container *ngIf="item.children && childTreeState?.get(childId)?.isExpanded">
           <ngx-tree-node *ngFor="let chItem of item.children" (clickEvent)="onCLick(chItem)">
-            <button setSize="m" [routerLink]="['./', chItem.data]" [state]="{ name: 'State Documentation' }" routerLinkActive="is-select">
+            <button [routerLink]="['./', chItem?.redirect]" routerLinkActive="is-select">
               <ngx-icon-default NgxPadding setSize="s" icon></ngx-icon-default>
               {{ chItem.label }}
             </button>
           </ngx-tree-node>
         </ng-container>
       </ng-container>
+      <ngx-card class="version-card__box" NgxPadding setSize="s">
+        <ngx-card-content>
+          <span>Beta 0.0.1</span>
+        </ngx-card-content>
+      </ngx-card>
     </ngx-tree>
   </ngx-side-aside>
 

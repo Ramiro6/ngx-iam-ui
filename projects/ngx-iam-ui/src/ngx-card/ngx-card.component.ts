@@ -1,31 +1,17 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  Input,
-  OnInit,
-} from '@angular/core';
-import { colorType } from '@ngx-iam-ui/components/ngx-directive';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'ngx-card',
   styleUrls: ['./ngx-card.component.scss'],
   template: `
-    <div class="ngx-card__body">
-      <ng-content></ng-content>
-    </div>
+    <ng-content select="ngx-card-title"></ng-content>
+    <ng-content select="ngx-card-content"></ng-content>
   `,
-  // eslint-disable-next-line @angular-eslint/no-host-metadata-property
-  host: { '[style.width]': 'ngxWidth' },
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { '[style.width]': 'ngxWidth' },
 })
-export class NgxCardComponent implements OnInit {
-  // @Input() ngxColor: colorType;
-
-  @Input() ngxWidth: string = '18rem';
+export class NgxCardComponent {
+  @Input() ngxColor?: any;
+  @Input() ngxWidth?: string;
   constructor() {}
-
-  ngOnInit(): void {
-    console.log('ramiro');
-    // this.isRed = true;
-  }
 }

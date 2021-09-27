@@ -1,17 +1,10 @@
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
-
-//:host ::ng-deep .padding-test {
-//  .ngx-tree-node__box {
-//    padding-left: 30px;
-//  }
-//  .is-select {
-//    background-color: black;
-//  }
-//}
 
 .add-container__padding {
   padding: 20px;
@@ -20,6 +13,8 @@
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -28,6 +23,8 @@
 @media (min-width: 992px) {
   .container {
     max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -36,5 +33,7 @@
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }

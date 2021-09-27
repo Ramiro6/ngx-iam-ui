@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'ngx-card-page-content',
+  selector: 'ngx-card-content',
   styles: [
     `
       :host {
@@ -13,4 +13,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   template: `<ng-content></ng-content>`,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NgxCardPageContentComponent {}
+export class NgxCardContentComponent {}
