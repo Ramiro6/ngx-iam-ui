@@ -1,0 +1,13 @@
+<pg-title-panel>
+  <ngx-tab-router>
+    <button [routerLink]="['./overview']" routerLinkActive="is-select">Overview</button>
+    <button [routerLink]="['./api']" routerLinkActive="is-select">Api</button>
+    <button [routerLink]="['./examples']" routerLinkActive="is-select">Examples</button>
+  </ngx-tab-router>
+
+
+  <router-outlet></router-outlet>
+</pg-title-panel>
+
+
+<!--[routerLink]="['./', chItem.data]" routerLinkActive="is-select"-->

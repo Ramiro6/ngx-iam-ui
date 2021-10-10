@@ -18,6 +18,12 @@ export const ROUTES: Routes = [
         loadChildren: () =>
           import('../card/card.module').then((m) => m.CardModule),
       },
+      {
+        path: 'ngx-flex',
+        data: { treeName: 'ngx-flex' },
+        loadChildren: () =>
+          import('../flex/flex.module').then((m) => m.FlexModule),
+      },
     ],
   },
 ];

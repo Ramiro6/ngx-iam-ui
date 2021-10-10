@@ -77,20 +77,12 @@ export class DocumentationComponent implements OnInit, AfterViewInit {
         ],
       },
       {
-        label: 'Components Test',
+        label: 'Tools',
         icon: 'arrow',
         children: [
           {
-            label: 'test-1',
-            redirect: 'test-1',
-          },
-          {
-            label: 'test-2',
-            redirect: 'test-2',
-          },
-          {
-            label: 'test-3',
-            redirect: 'test-3',
+            label: 'ngx-flex',
+            redirect: 'ngx-flex',
           },
         ],
       },

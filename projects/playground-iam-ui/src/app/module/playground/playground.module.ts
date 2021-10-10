@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { NgxCardModule } from '@ngx-iam-ui/components/ngx-card';
 
 export const ROUTES: Routes = [
   {
@@ -14,6 +13,6 @@ export const ROUTES: Routes = [
 ];
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild(ROUTES), NgxCardModule],
+  imports: [CommonModule, RouterModule.forChild(ROUTES)],
 })
 export class PlaygroundModule {}

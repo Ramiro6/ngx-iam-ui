@@ -10,7 +10,7 @@ import {
   template: `<ng-content></ng-content>`,
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
-  host: { ['style']: 'border: var(--border-primary-color)' },
+  // host: { ['style']: 'border: var(--border-primary-color)' },
 })
 export class NgxCardTitleComponent {
   // get setBottom(): boolean {
